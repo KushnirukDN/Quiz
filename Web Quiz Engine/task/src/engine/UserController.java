@@ -1,13 +1,11 @@
 package engine;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
 
@@ -26,8 +24,10 @@ public class UserController {
         String encodedPassword = passwordEncoder.encode(user.getPassword());
         User newUser = new User();
 
-        user.setPassword(encodedPassword);
-        user.setEmail(user.getEmail());
+        newUser.setPassword(encodedPassword);
+        newUser.setEmail(user.getEmail());
+
+        userRepository.save(newUser);
         return "good";
     }
 }
