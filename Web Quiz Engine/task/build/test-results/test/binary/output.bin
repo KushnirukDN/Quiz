@@ -1,0 +1,71 @@
+[1;31m
+Start test 1[0m
+
+(  .   ____          _            __ _ _
+) /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+*( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
++ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+*  '  |____| .__|_| |_|_| |_\__, | / / / /
+) =========|_|==============|___/=/_/_/_/
++ :: Spring Boot ::        (v2.2.2.RELEASE)
+
+Å2020-10-22 14:31:27.858  INFO 37350 --- [    Test worker] engine.WebQuizEngine                     : Starting WebQuizEngine on Dmytros-MacBook-Pro.local with PID 37350 (started by dmytro in /Users/dmytro/Desktop/Coding/Web Quiz Engine/Web Quiz Engine/task)
+¶2020-10-22 14:31:27.862  INFO 37350 --- [    Test worker] engine.WebQuizEngine                     : No active profile set, falling back to default profiles: default
+°2020-10-22 14:31:28.822  INFO 37350 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+∫2020-10-22 14:31:28.884  INFO 37350 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51ms. Found 2 JPA repository interfaces.
+ä2020-10-22 14:31:29.355  INFO 37350 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+í2020-10-22 14:31:29.609  INFO 37350 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8881 (http)
+2020-10-22 14:31:29.621  INFO 37350 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+ï2020-10-22 14:31:29.621  INFO 37350 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+ò2020-10-22 14:31:29.724  INFO 37350 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+•2020-10-22 14:31:29.724  INFO 37350 --- [    Test worker] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1814 ms
+Ä2020-10-22 14:31:29.843  INFO 37350 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+Ö2020-10-22 14:31:30.044  INFO 37350 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+ª2020-10-22 14:31:30.052  INFO 37350 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../quizdb'
+ü2020-10-22 14:31:30.289  INFO 37350 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+ç2020-10-22 14:31:30.369  INFO 37350 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.9.Final}
+û2020-10-22 14:31:30.574  INFO 37350 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+ü2020-10-22 14:31:30.700  INFO 37350 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+kHibernate: create table quiz (id bigint not null, text varchar(255), title varchar(255), primary key (id))
+íHibernate: create table quiz_answer (quiz_id bigint not null, answer integer, answer_array integer not null, primary key (quiz_id, answer_array))
+õHibernate: create table quiz_options (quiz_id bigint not null, options varchar(255), options_array integer not null, primary key (quiz_id, options_array))
+gHibernate: create table user (email varchar(255) not null, password varchar(255), primary key (email))
+JHibernate: create sequence hibernate_sequence start with 1 increment by 1
+tHibernate: alter table quiz_answer add constraint FKoxi2td1x8cc3y4a0vlsg2hfnc foreign key (quiz_id) references quiz
+uHibernate: alter table quiz_options add constraint FKsx28j7orq6asg17veq9nblhw8 foreign key (quiz_id) references quiz
+Ÿ2020-10-22 14:31:31.550  INFO 37350 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+©2020-10-22 14:31:31.557  INFO 37350 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+ù2020-10-22 14:31:31.885  WARN 37350 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+ú2020-10-22 14:31:32.069  INFO 37350 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+ù2020-10-22 14:31:32.425  INFO 37350 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5e5a11ff, org.springframework.security.web.context.SecurityContextPersistenceFilter@698eae1a, org.springframework.security.web.header.HeaderWriterFilter@bfb3217, org.springframework.security.web.authentication.logout.LogoutFilter@344c4090, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@575529c5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@dc085d9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6f5bf0dc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6394dbc5, org.springframework.security.web.session.SessionManagementFilter@23d46d49, org.springframework.security.web.access.ExceptionTranslationFilter@2b2756cb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@23af0937]
+õ2020-10-22 14:31:32.455  INFO 37350 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+°2020-10-22 14:31:32.513  INFO 37350 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8881 (http) with context path ''
+§2020-10-22 14:31:32.517  INFO 37350 --- [    Test worker] engine.WebQuizEngine                     : Started WebQuizEngine in 5.049 seconds (JVM running for 5.924)
+ü2020-10-22 14:31:32.863  INFO 37350 --- [nio-8881-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+é2020-10-22 14:31:32.864  INFO 37350 --- [nio-8881-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+Ü2020-10-22 14:31:32.872  INFO 37350 --- [nio-8881-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+sHibernate: select user0_.email as email1_3_, user0_.password as password2_3_ from user user0_ where user0_.email=?
+wHibernate: select user0_.email as email1_3_0_, user0_.password as password2_3_0_ from user user0_ where user0_.email=?
+<Hibernate: insert into user (password, email) values (?, ?)
+[1;31m
+Start test 2[0m
+sHibernate: select user0_.email as email1_3_, user0_.password as password2_3_ from user user0_ where user0_.email=?
+wHibernate: select user0_.email as email1_3_0_, user0_.password as password2_3_0_ from user user0_ where user0_.email=?
+<Hibernate: insert into user (password, email) values (?, ?)
+[1;31m
+Start test 3[0m
+¿2020-10-22 14:31:33.223  WARN 37350 --- [nio-8881-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public void engine.UserController.setUser(engine.User): [Field error in object 'user' on field 'email': rejected value [google.com]; codes [Pattern.user.email,Pattern.email,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.email,email]; arguments []; default message [email],[Ljavax.validation.constraints.Pattern$Flag;@15ebd258,^[\w!#$%&'*+/=?`{|}~^-]+(?:\.[\w!#$%&'*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,6}$]; default message [must match "^[\w!#$%&'*+/=?`{|}~^-]+(?:\.[\w!#$%&'*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,6}$"]] ]
+[1;31m
+Start test 4[0m
+ƒ2020-10-22 14:31:33.281  WARN 37350 --- [nio-8881-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public void engine.UserController.setUser(engine.User): [Field error in object 'user' on field 'email': rejected value [well@googlecom]; codes [Pattern.user.email,Pattern.email,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.email,email]; arguments []; default message [email],[Ljavax.validation.constraints.Pattern$Flag;@15ebd258,^[\w!#$%&'*+/=?`{|}~^-]+(?:\.[\w!#$%&'*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,6}$]; default message [must match "^[\w!#$%&'*+/=?`{|}~^-]+(?:\.[\w!#$%&'*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,6}$"]] ]
+[1;31m
+Start test 5[0m
+sHibernate: select user0_.email as email1_3_, user0_.password as password2_3_ from user user0_ where user0_.email=?
+[1;31m
+Start test 6[0m
+¸2020-10-22 14:31:33.299  WARN 37350 --- [nio-8881-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public void engine.UserController.setUser(engine.User): [Field error in object 'user' on field 'password': rejected value [1234]; codes [Size.user.password,Size.password,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.password,password]; arguments []; default message [password],2147483647,5]; default message [size must be between 5 and 2147483647]] ]
+[1;31m
+Start test 7[0m
+˚2020-10-22 14:31:33.306  WARN 37350 --- [nio-8881-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public void engine.UserController.setUser(engine.User): [Field error in object 'user' on field 'password': rejected value [123]; codes [Size.user.password,Size.password,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [user.password,password]; arguments []; default message [password],2147483647,5]; default message [size must be between 5 and 2147483647]] ]
+[1;31m
+Start test 8[0m
