@@ -13,13 +13,12 @@ public class ClientsAnswer {
     }
 
     public int[] getClientAnswer() {
-            return clientAnswer;
-        }
+        return clientAnswer;
+    }
 
 
     public void setAnswer(int[] clientAnswer) {
         Arrays.sort(clientAnswer);
         this.clientAnswer = clientAnswer;
-        }
     }
-
+}

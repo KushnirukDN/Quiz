@@ -11,4 +11,3 @@ public class WebQuizEngine {
         SpringApplication.run(WebQuizEngine.class, args);
     }
 }
-

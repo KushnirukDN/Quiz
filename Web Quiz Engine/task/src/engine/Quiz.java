@@ -2,6 +2,7 @@ package engine;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.security.core.context.SecurityContextHolder;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -11,6 +12,7 @@ import java.util.Arrays;
 import java.util.Objects;
 
 @Entity
+@Table(name = "quiz")
 public class Quiz {
 
     @Id
@@ -34,15 +36,19 @@ public class Quiz {
     @OrderColumn(name = "answer_array")
     public int[] answer = new int[0];
 
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    public String author;
+
     public Quiz() {
     }
 
-    public Quiz(Long id, String title, String text, String[] options, int[] answer) {
+    public Quiz(Long id, String title, String text, String[] options, int[] answer, String author) {
         this.id = id;
         this.title = title;
         this.text = text;
         this.options = options;
         this.answer = answer;
+        this.author = author;
     }
 
     public String getTitle() {
@@ -89,5 +95,12 @@ public class Quiz {
             this.answer = answer;
         }
     }
-}
 
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+}

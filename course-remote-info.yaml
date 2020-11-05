@@ -3,6 +3,7 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/287312/additional_files.json
   is_template_based: false
   use_ide: true
+update_date: Thu, 05 Nov 2020 19:42:15 UTC
 stages:
 - id: 504
   step: 8252
@@ -18,10 +19,10 @@ stages:
   is_completed: true
 - id: 508
   step: 8256
-  is_completed: false
+  is_completed: true
 - id: 509
   step: 8257
-  is_completed: false
+  is_completed: true
 topics:
   0:
   - title: External resources
@@ -60,6 +61,8 @@ topics:
     theory_id: 6854
   - title: Postman
     theory_id: 8512
+  - title: Functional decomposition
+    theory_id: 10570
   - title: IDE
     theory_id: 10996
   - title: Introduction to Spring Boot
@@ -100,10 +103,6 @@ topics:
     theory_id: 3532
   - title: Type casting
     theory_id: 3510
-  - title: Primitive and reference types
-    theory_id: 5035
-  - title: Array
-    theory_id: 3511
   - title: Comments
     theory_id: 3520
   - title: Naming variables
@@ -122,8 +121,6 @@ topics:
     theory_id: 5008
   - title: Characters
     theory_id: 3514
-  - title: String
-    theory_id: 3523
   - title: Conditional statement
     theory_id: 3503
   - title: Ternary operator
@@ -134,10 +131,24 @@ topics:
     theory_id: 3498
   - title: Branching statements
     theory_id: 3507
-  - title: Iterating over arrays
-    theory_id: 3602
+  - title: Switch statement
+    theory_id: 3504
   - title: Defining methods
     theory_id: 3590
+  - title: Calling a method
+    theory_id: 10973
+  - title: Declaring a method
+    theory_id: 10982
+  - title: The main method
+    theory_id: 3489
+  - title: Primitive and reference types
+    theory_id: 5035
+  - title: Array
+    theory_id: 3511
+  - title: Iterating over arrays
+    theory_id: 3602
+  - title: String
+    theory_id: 3523
   - title: IntelliJ IDEA
     theory_id: 3801
   - title: Write, compile, and run
@@ -191,10 +202,10 @@ topics:
     theory_id: 5364
   - title: Map
     theory_id: 3558
-  - title: Final variables
-    theory_id: 7427
   - title: Overloading
     theory_id: 3525
+  - title: Final variables
+    theory_id: 7427
   - title: Package
     theory_id: 3621
   - title: Access modifiers

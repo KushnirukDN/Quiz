@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id=":Problems-Boxes_are_not_just_objects!:main" external.linked.project.path="$MODULE_DIR$/../../../../Problems/Boxes are not just objects!" external.root.project.path="$MODULE_DIR$/../../../.." external.system.id="GRADLE" external.system.module.group="Web_Quiz_Engine" external.system.module.type="sourceSet" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+<module version="4">
+  <component name="ExternalSystem" externalSystem="GRADLE" externalSystemModuleGroup="Web_Quiz_Engine" externalSystemModuleType="sourceSet" externalSystemModuleVersion="unspecified" linkedProjectId=":Problems-Boxes_are_not_just_objects!:main" linkedProjectPath="$MODULE_DIR$/../../../../Problems/Boxes are not just objects!" rootProjectPath="$MODULE_DIR$/../../../.." />
   <component name="NewModuleRootManager">
     <output url="file://$MODULE_DIR$/../../../../Problems/Boxes are not just objects/!/out/production/classes" />
     <exclude-output />

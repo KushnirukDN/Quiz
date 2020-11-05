@@ -32,17 +32,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .httpBasic()
                 .and()
                 .authorizeRequests()
-                .antMatchers("/api/register/**").permitAll()
-                .antMatchers("/api/quizzes/**").authenticated()
+                .antMatchers("/api/register/**", "/actuator/shutdown/**").permitAll()
+                .antMatchers("/**").authenticated()
                 .and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
     }
 
-   @Override
-   protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-      auth
-               .userDetailsService(userDetailsService)
-               .passwordEncoder(passwordEncoder());
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        auth
+                .userDetailsService(userDetailsService)
+                .passwordEncoder(passwordEncoder());
     }
 }
-

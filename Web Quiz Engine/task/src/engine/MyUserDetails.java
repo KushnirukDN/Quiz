@@ -6,8 +6,9 @@ import java.util.Arrays;
 import java.util.Collection;
 
 public class MyUserDetails implements UserDetails {
-    private final String username;
-    private final String password;
+    private String username;
+    private String password;
+
     public MyUserDetails(String username, String password) {
         this.username = username;
         this.password = password;
